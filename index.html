@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="transparent-background">
+  <title>Prismatic Advanced</title>
+  <style>
+    body {
+      background-color: rgba(22, 100, 100, 0.7);
+    }
+  </style>
+</head>
+<body>
+  <ml-model
+    src="balloon.fbx"
+    style="width: 300px; height: 300px; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);"
+    z-offset="500px"
+    extractable="true"
+    extracted-scale="5"
+    unbounded="true">
+  </ml-model>
+
+  <ml-quad
+    src="couch.png"
+    style="width: 300px; height: 271px;"
+    color="rgba(255, 255, 255, 0.9)">
+  </ml-quad>
+
+  <ml-model
+    src="whale.fbx"
+    style="width: 300px; height: 300px; position: absolute; right: 0; top: 100%; transform: translate(-50%, -50%);"
+    z-offset="500px"
+    model-scale="0.5 0.5 0.5"
+    prism-rotation="0 0.785398 0"
+    xscale-to="axes: 0.5 0.5 0.5;duration: 3s; track: 1;"
+    model-animation="Take 001, false, -1">
+  </ml-model>
+
+  <script src="prismatic.min.js"></script>
+</body>
+</html>
